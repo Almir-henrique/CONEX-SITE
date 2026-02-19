@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conex Contadores</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.png" type="image/png">
+
+  <!-- SDK oficial do EmailJS via jsDelivr -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <!-- Inicialização do EmailJS -->
+  <script>
+    window.addEventListener('load', function () {
+      if (typeof emailjs !== 'undefined') {
+        emailjs.init("JDmHfaWmyAjCCIUS1");  // Substitua com sua chave pública
+        console.log('EmailJS carregado e inicializado.');
+      } else {
+        console.error('EmailJS SDK não carregado.');
+      }
+    });
+  </script>
+
+  <!-- Seu script.js -->
+  <script src="script.js" defer></script>
+
+<header>
+  <div class="logo">
+    <img src="logo-conex.png" alt="Logo Conex" />
+  </div>
+  <nav>
+    <a href="#sobre">QUEM SOMOS</a>
+    <a href="#representantes">PROFISSIONAIS</a>
+    <a href="#servicos">SERVIÇOS</a>
+    <a href="#contato">CONTATO</a>
+  </nav>
+</header>
+
+
+  <!-- LOGO PRINCIPAL -->
+  <section id="logo_principal">
+    <img src="logo-conex.png" alt="Logo Conex">
+  </section>
+
+  <!-- SOBRE NÓS -->
+  <section id="sobre">
+    <img src="quemsomos.png" alt="Quem somos">
+    <p>Somos uma empresa de contabilidade comprometida em facilitar a vida do micro ao grande empreendedor, bem como, os profissionais autônomos. Unimos experiência técnica com um atendimento humano, próximo e personalizado.<br>
+
+<br>Fundada por dois contadores apaixonados pelo que fazem, nossa missão é oferecer soluções contábeis claras, acessíveis e eficazes — para que você possa focar no crescimento do seu negócio, enquanto cuidamos de toda a parte burocrática.<br>
+
+<br>Conte com a gente para descomplicar a contabilidade e impulsionar seus resultados.</p>
+  </section>
+
+  <!-- REPRESENTANTES -->
+  <section id="representantes">
+    <img class="img-equipe" src="equipe_conex.png" alt="Equipe Conex">
+  <div class="fotos">
+  <div class="card-representante">
+   <img src="rafael.png" alt="Rafael Melo" class="imagem-hover">
+    <p class="legenda">Rafael Melo<br>Contador<br>CRC-PE 031201/04</p>
+  </div>
+  <div class="card-representante">
+   <img src="daniel.png" alt="Daniel Henrique" class="imagem-hover">
+    <p class="legenda">Daniel Henrique<br>Contador<br>CRC-PE 032950/01</p>
+  </div>
+</div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section id="servicos">
+    <h2>NOSSOS SERVIÇOS</h2>
+    <div class="servico-btns">
+      <button onclick="abrirModal('modal1')">Abertura, Alteração e Encerramento de Empresas</button>
+      <button onclick="abrirModal('modal2')">Escrituração Contábil</button>
+      <button onclick="abrirModal('modal3')">Escrituração e Apuração Fiscal</button>
+      <button onclick="abrirModal('modal4')">Departamento Pessoal</button>
+    </div>
+
+    <!-- Modais -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <span class="fechar" onclick="fecharModal('modal1')">&times;</span>
+        <h3>Abertura, Alteração e Encerramento de Empresas</h3>
+        <p>Cuidamos de todo o processo burocrático para abrir, regularizar ou encerrar sua empresa com segurança, rapidez e orientação estratégica.</p>
+      </div>
+    </div>
+
+    <div id="modal2" class="modal">
+      <div class="modal-content">
+        <span class="fechar" onclick="fecharModal('modal2')">&times;</span>
+        <h3>Escrituração Contábil</h3>
+        <p>Registramos e organizamos as movimentações financeiras da sua empresa, garantindo clareza, conformidade legal e base sólida para tomada de decisões.</p>
+      </div>
+    </div>
+
+    <div id="modal3" class="modal">
+      <div class="modal-content">
+        <span class="fechar" onclick="fecharModal('modal3')">&times;</span>
+        <h3>Escrituração e Apuração Fiscal</h3>
+        <p>Apuramos os impostos e mantemos sua empresa em dia com o fisco, evitando multas e aproveitando os melhores enquadramentos tributários.</p>
+      </div>
+    </div>
+
+    <div id="modal4" class="modal">
+      <div class="modal-content">
+        <span class="fechar" onclick="fecharModal('modal4')">&times;</span>
+        <h3>Departamento Pessoal</h3>
+        <p>Gerenciamos todas as rotinas trabalhistas: admissões, demissões, folha de pagamento, férias, encargos sociais e obrigações acessórias.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato">
+    <h2>CONTATO</h2>
+    <div class="contato-form">
+      <form id="formContato">
+        <input type="text" name="name" id="name" placeholder="Seu nome" required />
+        <input type="email" name="email" id="email" placeholder="Seu e-mail" required />
+        <input type="text" name="telefone" id="telefone" placeholder="Seu telefone (opcional)" />
+        <textarea name="mensagem" id="mensagem" placeholder="Sua mensagem" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+ <footer>
+  <div class="redes-sociais">
+
+    <div class="rede">
+      <a href="https://www.instagram.com/conexcontadores" target="_blank">
+        <div class="icone-fixo">
+          <img src="icone_insta.png" alt="Instagram">
+        </div>
+        <div class="texto-rede">
+          Siga no Instagram
+        </div>
+      </a>
+    </div>
+
+    <div class="rede">
+      <a href="https://wa.me/message/YIDGBYQMF5B5L1" target="_blank">
+        <div class="icone-fixo">
+          <img src="icone_wpp.png" alt="WhatsApp">
+        </div>
+        <div class="texto-rede">
+          Fale Conosco
+        </div>
+      </a>
+    </div>
+
+    <div class="rede">
+      <a href="https://mail.google.com/mail/u/0/#inbox">
+        <div class="icone-fixo">
+          <img src="icone_email.png" alt="E-mail">
+        </div>
+        <div class="texto-rede">
+          Mande um E-mail
+        </div>
+      </a>
+    </div>
+
+  </div> <!-- fecha redes-sociais -->
+
+  <div class="copyright">
+    © 2025 Conex Contadores - Todos os direitos reservados
+  </div>
+</footer>
+
+  <!-- Botão flutuante -->
+  <button id="btnTopo" onclick="voltarAoTopo()">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+      <path d="M12 4l-8 8h6v8h4v-8h6z"/>
+    </svg>
+  </button>
+
+  <!-- Aviso de Cookies -->
+  <div id="cookie-overlay">
+    <div id="cookie-banner">
+      <p>
+        Este site utiliza cookies para melhorar sua experiência. Ao continuar navegando, você concorda com nossa 
+        <a href="pdp.html" target="_blank">Política de Privacidade</a>.
+      </p>
+      <button onclick="aceitarCookies()">OK</button>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const overlay = document.getElementById("cookie-overlay");
+      if (localStorage.getItem("cookies_aceitos") !== "true") {
+        overlay.style.display = "flex";
+      } else {
+        overlay.style.display = "none";
+      }
+    });
+
+    function aceitarCookies() {
+      localStorage.setItem("cookies_aceitos", "true");
+      document.getElementById("cookie-overlay").style.display = "none";
+    }
+  </script>
+<script>
+  function toggleMenu() {
+    document.getElementById('navMenu').classList.toggle('ativo');
+  }
+</script>
+
+
+</body>
+</html>
